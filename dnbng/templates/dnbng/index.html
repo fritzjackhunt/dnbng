@@ -1,11 +1,394 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNBNG</title>
+    <title>DNB No. Nigeria</title>
+
+    <!--Bootstrap 5 CSS Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Our project just needs Font Awesome Free's Solid and Brand files -->
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/regular.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/light.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS File -->
+    <link href="{% static 'css/aos.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/glightbox.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/animations.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Template main CSS File -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+    <!--Favicon Link-->
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 </head>
 <body>
-    Hello world!
+    <!--Navbar Section STARTS-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'homepage' %}">
+              <img src="{% static 'pictures/logodun4.svg' %}" alt="Haan Oil Storage" width="100%" height="100%">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 pce-5">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#jumbotron">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#aboutus">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#petroleum-page">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contactus">Contacts</a>
+              </li>        
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Navbar Section ENDS-->
+
+
+    <!--Jumbotron Section STARTS-->
+    <div class="container" id="jumbotron">
+        <div class="row text-center"  data-aos="fade-in">
+            <div class="col-lg-12 col-12">
+                <span>Growth solutions for <button type="button" class="btn btn-outline-secondary">startup </button> <button type="button" class="btn btn-outline-secondary">agencies</button> <button type="button" class="btn btn-outline-secondary">existing companies</button></span>
+            </div>
+
+            <div class="mt-2">
+                <h1>Streamlining your <span class="accent">Duns & Broadstreet</span> Number application</h1>
+            </div>
+
+            <div class="pt-2">
+                <p>More than just an agency. We streamline your application process from top to bottom. From going global to registering on Google Play Store and Apple IOS store.</p>
+            </div>
+
+            <div class="mt-2">
+                <a type="button" href="#contactus" class="btn btn-dark">Start your process today  <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <!--Jumbotron Section ENDS-->
+
+
+    <!--About Us Section STARTS-->
+    <div class="container-fluid mt-5" id="aboutus">
+        <div class="row psy-5 psx-5 pcx-2 pcy-2"  data-aos="fade-right">
+            <div class="col-lg-2 col-12">
+                <h5>About Us</h5>
+                <span class="petroleum-line"></span>
+            </div>
+
+            <div class="col-lg-10 col-12">
+                <p class="accent">DNBNG simplifies the process of obtaining your DUNS number, ensuring a seamless experience for businesses. Our expert team guides you through each step, saving you time and effort. Trust us to handle the complexities, so you can focus on growing your business</p>
+
+                <p>At DNBNG, our expert team guides you every step of the way, ensuring a hassle free experience. Whether you are a startup or an established business, we will help you navigate the complexities and secure your DUNS number efficiently.</p>
+            </div>
+        </div>
+    </div>
+    <!--About Us Section ENDS-->
+
+
+    <!--Services Section STARTS-->
+    <div class="container-fluid" id="petroleum-page">
+      <div class="row psy-5 pcy-2" data-aos="fade-right">
+          <div class="col-lg-4 col-12 psx-5 pcy-2">
+              <h3>DNBNG agency for all sizes of companies and businesses</h3>
+              <span class="petroleum-line"></span>
+          </div>
+          <div class="col-lg-4 col-12">
+              <p>Our agency simplifies the DUNS number application process to make it easy for you that guarantees a quick turnaround time for your DUNS number application.</p>
+          </div>
+        </div>
+
+        <div class="row pn-5"  data-aos="fade-right">
+          <div class="col-lg-6 col-12" id="petroleum-card">
+            <div class="card">
+              <i class="fa-solid fa-gas-pump"></i>
+              <div class="card-body h-100">
+                <h5 class="card-title"><b>DUNS Number Registration</b></h5>
+                <p class="card-text">Effortlessly secure your unique D-U-N-S Number with our streamlined registration process. You'll also receive expert guidance through every step of your D-U-N-S application to ensure success.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12" id="petroleum-card">
+            <div class="card">
+              <i class="fa-solid fa-gas-pump"></i>
+              <div class="card-body h-100">
+                <h5 class="card-title"><b>DUNS Data Management</b></h5>
+                <p class="card-text">Keep your DUNS information accurate and updated with our comprehensive management services. We'll also ensure you have full compliance with industry standards and regulations for your D-U-N-S Number</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+          <div class="row pn1-5" data-aos="fade-right">
+          <div class="col-lg-6 col-12" id="petroleum-card">
+            <div class="card">
+              <i class="fa-solid fa-hashtag"></i>
+              <div class="card-body h-100">
+                <h5 class="card-title"><b>Custom DUNS Solutions</b></h5>
+                <p class="card-text">Get tailored solutions to meet the specific needs of your business regarding DUNS number</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12" id="petroleum-card">
+            <div class="card">
+              <i class="fa-solid fa-shield"></i>
+              <div class="card-body">
+                <h5 class="card-title"><b>Rapid DUNS Verification</b></h5>
+                <p class="card-text">Quickly verify your existing DUNS number with our fast and efficient services from Apple</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!--Services Section END-->
+
+
+    <!--FAQ Section STARTS-->
+    <div class="container-fluid" id="faq">
+      <div class="row pcb-5" data-aos="fade-right">
+        <div class="col-lg-12 col-12 text-center psx-5 psy-5 pcy-2">
+          <h5>Got questions, we are here to help</h5>
+          <span class="faq-line"></span>
+        </div>
+
+        <div class="col-lg-12 psx-5">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Why do I need a D-U-N-S number
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p><b>You may need a D-U-N-S Number to :</b></p>
+                  <ul>
+                    <li>Apply for government grants or contracts</li>
+                    <li>Create a business profile with D&B for credibility and visibility</li>
+                    <li>Apply for Apple and Google Play Sore developer programs</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  How long does it normally take to get a D-U-N-S Number
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Your D-U-N-S Number comes out after two working days but it takes 7-14 days to reflect across the global database</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  What documents are required to apply
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Typically, you'll need</p>
+                  <ul>
+                    <li>Registered business name</li>
+                    <li>Business address and contact details</li>
+                    <li>Name of the business owner or principal</li>
+                    <li>Comapany registration certificate (CAC in Nigeria)</li>
+                    <li>Tax identification number (if available)</li>
+                  </ul>
+                </div>
+              </div>  
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Can individuals apply for a D-U-N-S Number
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>D-U-N-S Numbers are only issued to registered entities. If you are a sole proprietor, your business must be legally registered before you can apply</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Will i get a D-U-N-S certificate
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>Dun & Bradstreet does not issue certificates, but we will provide you with your official D-U-N-S Number and confirmation email once approved</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FAQ Section ENDS-->
+
+    
+    <!--Contact Section STARTS-->
+    <div class="container" id="contactus">
+        <div class="row"  data-aos="fade-in">
+            <div class="col-lg-8 col-md-10 mx-auto">
+
+                {% if contact_fname %}
+
+                <br><br>
+
+                <h2>
+                    Thanks {{ contact_fname }}! &#129346
+                    <p>
+                        We've received your mail! &#128233
+                    </p>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+                {% else %}
+            
+
+                <br><br>
+
+                <h3 id="contact"><b>Ask Us Any Question? {{ contact_fname }}</b></h3>
+                <span class="contact-line"></span>
+
+                <br>
+
+                <form action="{% url 'homepage' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control mb-30" placeholder="First name" name="fname">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control mb-30" placeholder="Last name" name="lname">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-12">
+                            <input type="email" class="form-control mb-30" id="exampleInputEmail1" placeholder="email" aria-describedby="emailHelp" name="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class=" form-group col-12">
+                            <textarea class="form-control mb-30" id="exampleFormControlTextarea1" placeholder="Send a message to info@dnbng.xyz" rows="6" name="message"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <br>
+
+    {% endif %}
+    <!--Contact Section ENDS-->
+
+    <!--Footer section STARTS-->
+   
+    <div class="container-fluid" id="footer">
+      
+        <div class="row psx-5 psy-5">
+          <hr>
+          <div class="col-lg-6 col-12">
+
+            <img src="{% static 'pictures/logodun4.svg' %}" alt="Haan Oil Storage" width="50%" height="35%">
+
+            <br> <br>
+  
+            <span>No. 10 AKownwojo Street</span>
+            <br>
+            <span>Alimosho, Lagos State</span>
+  
+            <p>Email: info@dnbng.xyz</p>
+  
+            <br>
+  
+            <p>To report an emergency or ethical concern please call our hotline numbers:</p>
+          </div>
+  
+          <div class="col-lg-3 col-12">
+            <span class="footer-sub">Quick Links</span>
+            <span class="footer-line"></span>
+            <ul class="pct-5 pst-3">
+              <li><a href="#">Home</a></li>
+              <li><a href="#aboutus">About Us</a></li>
+              <li><a href="#petroleum-page">Services</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contactus">Contact</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-3 col-12">
+            <span class="footer-sub">Contacts</span>
+            <span class="footer-line"></span>
+            <ul class="pct-5 pst-3">
+              <li>info@dnbng.xyz</li>
+              <li>Weekdays 8AM - 10PM</li>
+              <li>Weekends 10AM - 6PM</li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-12" id="copyright">
+           
+            <span>&copy; 2022 DNBNG, INC. All right reserved</span>
+          </div>
+  
+        </div>
+    </div>
+  
+    <!--Footer section ENDS-->
+
+
+
+    <!--Vendor JS Files-->
+    <script src="{% static 'js/aos.js' %}"></script>
+    <script src="{% static 'js/glightbox.min.js' %}" type="application/javascript"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+
+    <!-- Template main JS File -->
+    <script src="{% static 'js/main.js' %}" type="application/javascript"></script>
+
+
+    <!--Bootstrap 5 JS Link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
