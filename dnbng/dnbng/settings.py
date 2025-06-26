@@ -138,3 +138,4 @@ EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'essiet.aniekan31@gmail.com'
 EMAIL_HOST_PASSWORD = 'qrrdsmqjzknaiujo'
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'essiet.aniekan31@gmail.com'
